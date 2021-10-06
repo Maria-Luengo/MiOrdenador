@@ -6,9 +6,10 @@ public class Orden {
    Computadora computadoras[];
    private static int contadorOrdenes;
    private static int contadorComputadoras;
-   private static int  maxComputadoras;
+   private final static int  maxComputadoras =20;
 
     public Orden() {
+        computadoras = new Computadora[Orden.maxComputadoras];
         Orden computadoras[] = new Orden[Orden.maxComputadoras];
     }
    
@@ -23,5 +24,7 @@ public class Orden {
    
    public void mostrarOrden(){
        System.out.println("idOrden: "+ idOrden);
+       System.out.println("contador ordenes: "+ contadorOrdenes);
+       System.out.println("contador computadoras: "+ contadorComputadoras);
    }
 }
