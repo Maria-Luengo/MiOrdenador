@@ -2,17 +2,20 @@
 package com.ceep.domino;
 
 
-public class Monitor extends Computadora{
-    private int idMonitor;
+public class Monitor{
+    private final int idMonitor;
     private String marca;
     private double tamanio;
-    private int contadorMonitores;
+    private static int contadorMonitores;
 
+    //constructores
     public Monitor() {
+        this.idMonitor = ++Monitor.contadorMonitores;
     }
 
     
     public Monitor(String marca, double tamanio) {
+        this();
         this.marca = marca;
         this.tamanio = tamanio;
     }
@@ -21,14 +24,12 @@ public class Monitor extends Computadora{
         return idMonitor;
     }
 
-    public void setIdMonitor(int idMonitor) {
-        this.idMonitor = idMonitor;
-    }
-
     public String getMarca() {
         return marca;
     }
 
+    //set de idMonitor me da error
+    
     public void setMarca(String marca) {
         this.marca = marca;
     }
