@@ -1,19 +1,21 @@
-
 package com.ceep.domino;
 
-
 public class Computadora extends Orden {
-   private int idComputadora;
-   private String nombre;
-   Monitor monitor;
-   Teclado teclado;
-   Raton raton;
+
+    private final int idComputadora;
+    private String nombre;
+    private Monitor monitor;
+    private Teclado teclado;
+    private Raton raton;
+    private static int contadorConputadoras;
 
     public Computadora() {
+        this.idComputadora = ++contadorConputadoras;
     }
 
-    public Computadora( Monitor monitor, Teclado teclado, Raton raton) {
-       // this.nombre = nombre;
+    public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton) {
+        this();
+        this.nombre = nombre;
         this.monitor = monitor;
         this.teclado = teclado;
         this.raton = raton;
@@ -23,9 +25,7 @@ public class Computadora extends Orden {
         return idComputadora;
     }
 
-    public void setIdComputadora(int idComputadora) {
-        this.idComputadora = idComputadora;
-    }
+    //set de idComputadora da ERROR xq ya está inicializado
 
     public String getNombre() {
         return nombre;
@@ -71,6 +71,4 @@ public class Computadora extends Orden {
     public String toString() {
         return "idComputadora=" + idComputadora + ", nombre=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton + '}';
     }
-   
-   
 }
