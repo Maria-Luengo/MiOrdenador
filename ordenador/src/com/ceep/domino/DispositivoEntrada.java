@@ -2,14 +2,16 @@ package com.ceep.domino;
 
 public class DispositivoEntrada  {
 
-    private String tipoEntrada;
-    private String marca;
+    protected String tipoEntrada; //podemos poner protected
+    protected String marca;
 
+    //constructor
     public DispositivoEntrada(String tipoEntrada, String marca) {
         this.tipoEntrada = tipoEntrada;
         this.marca = marca;
     }
 
+    //G&S
     public String getTipoEntrada() {
         return tipoEntrada;
     }
@@ -25,6 +27,10 @@ public class DispositivoEntrada  {
     public void setMarca(String marca) {
         this.marca = marca;
     }
-    
+
+    @Override
+    public String toString() {
+        return "tipoEntrada=" + tipoEntrada + ", marca=" + marca ;
+    }
 
 }
