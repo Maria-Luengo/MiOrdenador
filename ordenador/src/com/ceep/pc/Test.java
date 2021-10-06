@@ -11,6 +11,10 @@ public class Test {
         Monitor m1 = new Monitor("LG", 21.5);
 
         Computadora c1 = new Computadora(m1, t1, r1);
+        
+        Orden o1 = new Orden();
+        o1.agregarComputadoras(c1);
+        o1.mostrarOrden();
     }
 
 }
